@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lica_lib
 {
-    public class Helpers
+    public class Palindromes
     {
         public static bool isPalindromeInAnagramOf(string inputString)
         {
