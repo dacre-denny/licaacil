@@ -22,8 +22,14 @@ namespace lica_lib
         /// </summary>
         /// <param name="inputStr">The string that is processed to determine if it can be reorganised into a palindrome.</param>
         /// <returns>Returns true is characters of input string can be reorganised into a palindrome. Returns false otherwise.</returns>
-        public static bool isPalindromeInAnagramOf(string inputStr)
+        public static bool isAnagramOfPalindrome(string inputStr)
         {
+            //Make method "Defensive" 
+            if (String.IsNullOrEmpty(inputStr))
+            {
+                return false;
+            }
+
             Dictionary<char, int> charToCounts = new Dictionary<char, int>();
 
             //Build dictionary of count per character in inputStr. This dictionary is later used to detect the 
@@ -64,5 +70,6 @@ namespace lica_lib
             //The symetry of a palindrome has not be found in the input string. Return false as per spec.
             return false;
         }
+        
     }
 }
