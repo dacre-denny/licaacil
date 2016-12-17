@@ -1,4 +1,4 @@
 /*/obj
 /*/bin
 *.suo
-/lica-app/*.user
+*.user
