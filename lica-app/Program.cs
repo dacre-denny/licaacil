@@ -20,32 +20,23 @@ namespace lica_app
 
                 string input = args[0], result = "";
                 
-                if (Palindromes.isAnagramOfPalindrome(input))
+                if (Palindromes.isPalindromeOrAnagramOfPalindrome(input))
                 {
-                    Func<string, bool> isPalindrome = str => {
+                    int halfLength = (int)Math.Ceiling(input.Length / 2f);
+                    bool isSymmetric = true;
 
-                        if (String.IsNullOrEmpty(str))
+                    for (int i = 0; i < halfLength; i++)
+                    {
+                        int revI = input.Length - 1 - i;
+
+                        if (input.ElementAt(i) != input.ElementAt(revI))
                         {
-                            return false;
+                            isSymmetric = false;
+                            break;
                         }
+                    }
 
-                        int halfLength = (int)Math.Ceiling(str.Length / 2f);
-
-                        for (int i = 0; i < halfLength; i++)
-                        {
-                            var c = str.ElementAt(i);
-                            var rc = str.ElementAt(str.Length - 1 - i);
-
-                            if (c != rc)
-                            {
-                                return false;
-                            }
-                        }
-
-                        return true;
-                    };
-
-                    result = isPalindrome(input) ? "is palindrome" : "is anagram of a palindrome";
+                    result = isSymmetric ? "is palindrome" : "is anagram of a palindrome";
                 }
                 else
                 {

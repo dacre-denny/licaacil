@@ -22,7 +22,7 @@ namespace lica_lib
         /// </summary>
         /// <param name="inputStr">The string that is processed to determine if it can be reorganised into a palindrome.</param>
         /// <returns>Returns true is characters of input string can be reorganised into a palindrome. Returns false otherwise.</returns>
-        public static bool isAnagramOfPalindrome(string inputStr)
+        public static bool isPalindromeOrAnagramOfPalindrome(string inputStr)
         {
             //Make method "Defensive" 
             if (String.IsNullOrEmpty(inputStr))

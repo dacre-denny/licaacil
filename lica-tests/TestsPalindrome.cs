@@ -8,37 +8,83 @@ namespace lica_testsuite
     public class TestSuitePalindromes
     {
         [TestMethod]
-        public void isAnagramOfPalindrome_MultiCharEvenLength_Expect_True()
+        public void isPalindromeOrAnagramOfPalindrome_MultiCharEvenLength_Expect_True()
         {
-            Assert.IsTrue(Palindromes.isAnagramOfPalindrome("anna"));
+            Assert.IsTrue(Palindromes.isPalindromeOrAnagramOfPalindrome("anna"));
         }
 
         [TestMethod]
-        public void isAnagramOfPalindrome_SingleCharEvenLength_Expect_True()
+        public void isPalindromeOrAnagramOfPalindrome_SingleCharEvenLength_Expect_True()
         {
-            Assert.IsTrue(Palindromes.isAnagramOfPalindrome("aaaaaaaa"));
+            Assert.IsTrue(Palindromes.isPalindromeOrAnagramOfPalindrome("aaaaaaaa"));
         }
 
         [TestMethod]
-        public void isAnagramOfPalindrome_MultiCharOddLength_Expect_True()
+        public void isPalindromeOrAnagramOfPalindrome_MultiCharOddLength_Expect_True()
         {
-            Assert.IsTrue(Palindromes.isAnagramOfPalindrome("aaaaaaaab"));
+            Assert.IsTrue(Palindromes.isPalindromeOrAnagramOfPalindrome("aaaaaaaab"));
 
-            Assert.IsTrue(Palindromes.isAnagramOfPalindrome("igdedgide"));
+            Assert.IsTrue(Palindromes.isPalindromeOrAnagramOfPalindrome("igdedgide"));
         }
 
         [TestMethod]
         public void isAnagramOf_NonPalindromeMultiCharEvenLength_Expect_False()
         {
-            Assert.IsFalse(Palindromes.isAnagramOfPalindrome("caaaaaaaab"));
+            Assert.IsFalse(Palindromes.isPalindromeOrAnagramOfPalindrome("caaaaaaaab"));
 
-            Assert.IsFalse(Palindromes.isAnagramOfPalindrome("owefhijpfwai"));
+            Assert.IsFalse(Palindromes.isPalindromeOrAnagramOfPalindrome("owefhijpfwai"));
         }
 
         [TestMethod]
         public void isAnagramOf_MultiCharOddLength_Expect_True()
         {
-            Assert.IsTrue(Palindromes.isAnagramOfPalindrome("donotbobtonod"));
+            Assert.IsTrue(Palindromes.isPalindromeOrAnagramOfPalindrome("donotbobtonod"));
         }
+
+        #region Other test cases to consider
+        /*
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Null_Expect_ArgumentNullException()
+        {
+            Helpers.isPalindromeInAnagramOf(null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Empty_Expect_ArgumentException()
+        {
+            Helpers.isPalindromeInAnagramOf(String.Empty);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void IsWhiteSpace_Expect_ArgumentException()
+        {
+            Helpers.isPalindromeInAnagramOf(" ");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void HasWhiteSpaces_Expect_ArgumentException()
+        {
+            Helpers.isPalindromeInAnagramOf("a n n a");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void NotLowerCase_Expect_ArgumentException()
+        {
+            Helpers.isPalindromeInAnagramOf("aNnA");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void NotAlphaOnly_Expect_ArgumentException()
+        {
+            Helpers.isPalindromeInAnagramOf("6nn@");
+        }
+        */
+        #endregion
     }
 }
