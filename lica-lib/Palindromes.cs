@@ -13,30 +13,24 @@ namespace lica_lib
     public class Palindromes
     {
         /// <summary>
-        /// Determines if the characters in the input string can be reorganised into a palindrome.
+        /// Determines if the input string is a palindrome, or if it is a anagram of a palindrome, returning true in either of these cases, and false otherwise.
         /// 
-        /// The order of characters in the input string does not is not important. We need to look at the number of times character(s)
-        /// occur in the input string, to determine if the string can be reorganised into a palindrome (ie an anagram of a palindrome).
-        /// With the number of occurances per character, we then detect the possibility of a palindrome in the string by "symetery" of a palindrome in
+        /// The method achieves this by calculating the number of times characters occur in the input string, and uses this to determine the "symetery" of characters
+        /// occurences in the input string, the key property of a palindrome. Because the method returns true for an anagram of a palindrome, there is no constraint 
+        /// on the characters being ordered in any particular way.
         /// 
         /// </summary>
-        /// <param name="inputStr">The string that is processed to determine if it can be reorganised into a palindrome.</param>
-        /// <returns>Returns true is characters of input string can be reorganised into a palindrome. Returns false otherwise.</returns>
+        /// <param name="inputStr">The string processed to determine if it is a palindrome or anagram of a palindrome.</param>
+        /// <returns>Returns true if input string is a palindrome or anagram of a palindrome, otherwise returns.</returns>
         public static bool isPalindromeOrAnagramOfPalindrome(string inputStr)
         {
-            //Make method "Defensive" 
-            if (String.IsNullOrEmpty(inputStr))
-            {
-                return false;
-            }
-
             Dictionary<char, int> charToCounts = new Dictionary<char, int>();
 
             //Build dictionary of count per character in inputStr. This dictionary is later used to detect the 
-            //symmetry of a palindrome or anagram of a palindrome in the string. 
+            //symmetry of input string (ie if it is a palindrome or anagram of a palindrome). 
             foreach (char c in inputStr)
             {
-                if(charToCounts.ContainsKey(c))
+                if(charToCounts.ContainsKey(c)) 
                 {
                     charToCounts[c] ++;
                 }
@@ -59,9 +53,9 @@ namespace lica_lib
                 return true;
             }
 
-            //If one character in the input string has occured an odd number of times, then the symmetry of a
-            //palindrome exists in the string. This edge case indicates the input string is a palindrome or anagram 
-            //of a palindrome, in a form such as "abb", "efgfe", "zzzez", etc
+            //Edge case - one character in the input string has occured an odd number of times. Symmetry of a
+            //palindrome also exists in the string in this case. Applies to cases where input is a palindrome or anagram 
+            //of a palindrome in a form such as "abb", "efgfe", "zzzez", etc
             if (charCounts.Count(isOdd) == 1)
             {
                 return true;
