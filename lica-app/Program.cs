@@ -36,11 +36,11 @@ namespace lica_app
                         }
                     }
 
-                    result = isSymmetric ? "is palindrome" : "is anagram of a palindrome";
+                    result = isSymmetric ? "is a palindrome" : "is a anagram of a palindrome";
                 }
                 else
                 {
-                    result = "is neither palindrome, nor anagram of a palindrome";
+                    result = "is neither a palindrome, nor an anagram of a palindrome";
                 }
 
                 Console.WriteLine("Input string '{0}' {1}", input, result);
