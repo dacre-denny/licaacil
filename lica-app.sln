@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lica-app", "lica-app.csproj", "{38C70AF3-5A8B-4D34-8E95-0175C8B7D10F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lica-app", "lica-app\lica-app.csproj", "{38C70AF3-5A8B-4D34-8E95-0175C8B7D10F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lica-tests", "..\lica-tests\lica-tests.csproj", "{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lica-lib", "lica-lib\lica-lib.csproj", "{3ADF4CC1-A3A7-4575-B6E5-CEFC7C457E0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lica-lib", "..\lica-lib\lica-lib.csproj", "{3ADF4CC1-A3A7-4575-B6E5-CEFC7C457E0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lica-tests", "lica-tests\lica-tests.csproj", "{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{38C70AF3-5A8B-4D34-8E95-0175C8B7D10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C70AF3-5A8B-4D34-8E95-0175C8B7D10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38C70AF3-5A8B-4D34-8E95-0175C8B7D10F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3ADF4CC1-A3A7-4575-B6E5-CEFC7C457E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3ADF4CC1-A3A7-4575-B6E5-CEFC7C457E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ADF4CC1-A3A7-4575-B6E5-CEFC7C457E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ADF4CC1-A3A7-4575-B6E5-CEFC7C457E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A540613-8F43-44F2-AC5D-21D6F4BCAB12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
